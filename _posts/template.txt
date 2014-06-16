@@ -1,0 +1,10 @@
+---
+title:  "[Question text]?"
+anchor: [unique id for this question]
+related:
+  - id: [anchor of related question]
+    label: [desired text label for related question]
+  - id: test2
+    label: test-related2
+---
+[Answer text]

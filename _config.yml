@@ -1,0 +1,4 @@
+name: PIXDO FAQ
+markdown: redcarpet
+pygments: true
+permalink: /#:title

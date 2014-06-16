@@ -1,0 +1,36 @@
+---
+layout: pixdo
+title: PIXDO FAQ
+---
+
+<div id="content-wrapper">
+    <div class="inner-wrapper">
+        <div class="faq-wrapper">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-menu">
+                <ul>
+                    {% for post in site.posts %}
+                    <li>
+                        <a href="#{{ post.anchor }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="faq-content">
+                {% for post in site.posts %}
+                <hr />
+                <article class="faq-item" id="{{ post.anchor }}">
+                    <h2>{{ post.title}}</h2>
+                    <p class="content-text">{{post.content}}</p>
+                    {% if post.related %}
+                        Also see:
+                        {% for item in post.related %}
+                            <span><a href="#{{ item.id }}">{{item.label}}</a></span>{% if forloop.rindex > 1 %},{% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
